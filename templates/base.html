@@ -1,0 +1,86 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ template "title" . }}</title>
+  </head>
+  <body>
+    {{ template "main" . }}
+  </body>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    input {
+      padding: 0.25rem 0.5rem;
+      border: 1px solid #456c9f;
+      border-radius: 3px;
+    }
+
+    input:focus {
+      outline: none;
+      border: 1px solid #37547b;
+    }
+
+    button, a {
+      padding: 0.5rem 1rem;
+      background-color: rgba(24, 83, 160, 0.16);
+      border: 1px solid #456c9f;
+      border-radius: 3px;
+      color: #456c9f;
+      cursor: pointer;
+    }
+
+    button:hover, a:hover {
+      background-color: rgba(24, 83, 160, 0.22);
+    }
+
+    a {
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form__item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form__label {
+      margin-bottom: 0.25rem;
+    }
+
+    .card {
+      padding: 1rem;
+      border: 1px lightgray solid;
+      border-radius: 6px;
+      width: 20rem;
+    }
+
+    .card__header {
+      text-align: center;
+      font-size: large;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid lightgray;
+    }
+
+    .card__body {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+      gap: 1rem;
+    }
+  </style>
+</html>
+{{ end }}

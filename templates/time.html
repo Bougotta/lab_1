@@ -1,0 +1,13 @@
+{{ template "base" . }}
+
+{{ define "title" }} Дата и время {{ end }}
+
+{{ define "main" }}
+<div class="card">
+    <div class="card__header">Дата и время</div>
+    <div class="card__body">
+        <div style="text-align: center;">{{ .Format "02-01-2006 15:04" }}</div>
+        <a href="/">На главную страницу</a>
+    </div>
+  </div>
+{{ end }}
